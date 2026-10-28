@@ -20,10 +20,8 @@ public class BrowserWindowHandle {
 		//1.fetch the window id
 		
 		Set<String> handles=driver.getWindowHandles();//it will give the window handles every window has a unique id it is called window Id
-		//set do not maintain the order we can have only and only values
 		
-		//how to fetch the value from the set?? use iterator which will help to fetch the values from the collections which do not maintain the order
-		//while storing the values
+		//how to fetch the value from the set?? 
 		
 		Iterator<String> it=handles.iterator();
 		

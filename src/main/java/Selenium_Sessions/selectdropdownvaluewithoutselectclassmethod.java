@@ -19,7 +19,7 @@ public class selectdropdownvaluewithoutselectclassmethod {
 
 		By country = By.id("Form_getForm_Country");
 		selectValueFromDropDown(country, "India");
-		//selectValueFromDropDown(country, "Brazil");
+		// selectValueFromDropDown(country, "Brazil");
 
 	}
 
@@ -27,24 +27,23 @@ public class selectdropdownvaluewithoutselectclassmethod {
 		Select select = new Select(getElement(locator));
 
 		List<WebElement> optionsList = select.getOptions();
-		boolean flag=false;
+		boolean flag = false;
 		for (WebElement e : optionsList) {
 			String text = e.getText();
 			System.out.println(text);
 			if (text.contains(value)) {
 				e.click();
-				flag=true;
+				flag = true;
 				break;
 
 			}
 
 		}
-		
-		if(flag) {
-			System.out.println(value +" " +"is available and selected");
-		}
-		else {
-			System.out.println(value+"option is not available");
+
+		if (flag) {
+			System.out.println(value + " " + "is available and selected");
+		} else {
+			System.out.println(value + "option is not available");
 		}
 
 	}

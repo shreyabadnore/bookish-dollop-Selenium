@@ -14,7 +14,9 @@ public class launchChrome {
 		
 		System.out.println(driver.getTitle());
 		
-		driver.quit();
+		driver.close();
+		driver.get("https://www.google.com");
+		
 
 		
 		

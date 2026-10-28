@@ -6,12 +6,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
-public class crossBrowserTest {
+public class CrossBrowserTest {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
 
-		String browser = "firefox";
+		String browser = "chrome";
 
 		switch (browser.toLowerCase().trim()) {
 		case "chrome":

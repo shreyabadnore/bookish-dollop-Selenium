@@ -10,22 +10,6 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-//BS Connect with DB
-//BT Create User
-//BC launchBrowser
-
-	 
-	//BM LoginToApp
-	//Title Test
-	//AM Logout
-
-//BM LoginToApp
-//url Test
-//AM Logout
-
-	//AC closeBrowser
-	//AT closeBrowser
-
 public class TestingAnnotations {
 
 	@BeforeSuite

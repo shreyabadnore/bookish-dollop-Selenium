@@ -8,7 +8,7 @@ public class HeadlessConcept {
 	
 	
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 		ChromeOptions co=new ChromeOptions();
 		
@@ -16,8 +16,10 @@ public class HeadlessConcept {
 		
 		WebDriver driver=new ChromeDriver(co);
 		
+		
 		driver.get("https://www.google.com");
 		System.out.println(driver.getTitle());
+		Thread.sleep(3000);
 		driver.quit();
 		
 

@@ -1,6 +1,6 @@
 package Selenium_Sessions;
 
-public class xPathAxes {
+public class XPathAxes {
 
 	public static void main(String[] args) {
 

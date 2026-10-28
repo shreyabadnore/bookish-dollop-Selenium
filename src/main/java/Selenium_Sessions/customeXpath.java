@@ -18,14 +18,14 @@ static WebDriver driver;
 			//2. Relative xpath: custom xpath: functions, text, axes
 			
 			//using one attribute:
-			//htmltag[@attr='value']====formula
+			//htmltag[@attr='value']=======================formula
 			//input[@id='input-email']
 			//input[@name='email']
 			//input[@placeholder='E-Mail Address']
 			//input[@value='Login']
 			
 			//using two attributes:
-			//htmltag[@attr1='value' and @attr2='value']==formula
+			//htmltag[@attr1='value' and @attr2='value']=======================formula
 			//input[@type='submit' and @value='Login']
 			
 			//input[@type='text' and @name='email' and @placeholder='E-Mail Address']
@@ -35,24 +35,24 @@ static WebDriver driver;
 			//input[@id and @type] -- 6 -- FEs
 			
 			//text():
-			//htmltag[text()='value']===formula
+			//htmltag[text()='value']===========================formula
 			//a[text()='Forgotten Password']
 			//h1[text()='Register Account']
 			//strong[text()='I am a returning customer']
 			
 			//text() and attribute:
-			//htmltag[text()='value' and @attr='value']===formula
+			//htmltag[text()='value' and @attr='value']========================formula
 			//htmltag[text()='value' and @attr1='value' and @attr2='value']
 			//a[text()='Address Book' and @class='list-group-item']
 			//a[@class='list-group-item' and text()='Address Book']
 			
 			//contains() with attribute:
-			//htmltag[contains(@attr,'value')]===formula
+			//htmltag[contains(@attr,'value')]================================formula
 			//a[contains(@href,'route=account/recurring')]
 			//input[contains(@placeholder,'E-Mail')]
 			//input[contains(@placeholder,'Address')]
 			
-			//htmltag[contains(@attr,'value') and @attr2='value']==formula
+			//htmltag[contains(@attr,'value') and @attr2='value']================formula
 			//input[contains(@placeholder,'Address') and @name='email']
 			
 			//htmltag[contains(@attr,'value') and contains(@attr2,'value')]
@@ -78,7 +78,7 @@ static WebDriver driver;
 			By.xpath("//input[contains(@id,'firstname_')]");//valid
 			
 			//starts-with():
-			//htmltag[starts-with(text(),'value')]
+			//htmltag[starts-with(text(),'value')]========================
 			//p[starts-with(text(),'By creating an account')]
 			
 //			<input id="firstname987login">
@@ -87,7 +87,7 @@ static WebDriver driver;
 			//ends-with(): not available in xpath
 			
 			//indexing in xpath:
-			// (//input[@class='form-control'])[2]
+			// (//input[@class='form-control'])[2]=====================
 			// (//input[@class='form-control'])[position()=2]
 			driver.findElement(By.xpath("(//input[@class='form-control'])[2]")).sendKeys("test");
 			

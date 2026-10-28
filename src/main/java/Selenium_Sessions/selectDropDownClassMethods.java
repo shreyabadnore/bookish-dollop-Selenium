@@ -11,34 +11,20 @@ public class selectDropDownClassMethods {
 	static WebDriver driver;
 
 	public static void main(String[] args) {
-		
-		driver=new ChromeDriver();
-		
+
+		driver = new ChromeDriver();
+
 		driver.get("https://www.orangehrm.com/30-day-free-trial");
-		
-	
-		By country=By.id("Form_getForm_Country");
-		
-		WebElement countryEle=driver.findElement(country);
-			
-		Select select=new Select(countryEle);
-		
-		String text=select.getFirstSelectedOption().getText();
+
+		By country = By.id("Form_getForm_Country");
+
+		WebElement countryEle = driver.findElement(country);
+
+		Select select = new Select(countryEle);
+
+		String text = select.getFirstSelectedOption().getText();
+
 		System.out.println(text);
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 
 	}
 

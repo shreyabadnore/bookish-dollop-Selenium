@@ -26,18 +26,10 @@ public class actionsScrolling {
 //
 //		act.sendKeys(Keys.CONTROL).sendKeys(Keys.HOME).perform();
 
-	
-		//scroll to the specific page
-		act.scrollToElement(driver.findElement(By.linkText("OpenCart")))
-		.pause(200)
-		.click(driver.findElement(By.linkText("OpenCart")))
-		.build().perform();
-	
-	
-	
-	
-	
-	
+		// scroll to the specific page
+		act.scrollToElement(driver.findElement(By.linkText("OpenCart"))).pause(200)
+				.click(driver.findElement(By.linkText("OpenCart"))).build().perform();
+
 	}
 
 }
