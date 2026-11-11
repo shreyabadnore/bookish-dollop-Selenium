@@ -9,57 +9,58 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BrowserMultipleWindowHandle {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://jstestingacademy.co.in/qa-demo/alerts/windows.html?utm_source=chatgpt.com");// parent window
+    public static void main(String[] args) throws InterruptedException {
 
-		driver.manage().window().maximize();
-		Thread.sleep(3000);
+        WebDriver driver = new ChromeDriver();
 
-		String parentWindowId = driver.getWindowHandle();
+        driver.manage().window().maximize();
 
-		driver.findElement(By.id("tab-button")).click();
-		driver.findElement(By.id("tab-button")).click();
-		driver.findElement(By.id("tab-button")).click();
+        driver.get("https://jstestingacademy.co.in/qa-demo/alerts/windows.html");
 
-		Set<String> handles = driver.getWindowHandles();
-		Thread.sleep(2000);
+        Thread.sleep(3000);
 
-		/*
-		 * Iterator<String> it = handles.iterator();//method from set interface iterator
-		 * 
-		 * while (it.hasNext()) { String windowId = it.next();
-		 * driver.switchTo().window(windowId); System.out.println("window url: " +
-		 * driver.getCurrentUrl());
-		 * 
-		 * Thread.sleep(1500);
-		 * 
-		 * if (!windowId.equals(parentWindowId)) { driver.close(); }
-		 */
+        // Store the parent window ID
+        String parentWindowId = driver.getWindowHandle();
 
-		for (String windowId : handles) {
+        // Open three child windows
+        driver.findElement(By.id("tab-button")).click();
+        driver.findElement(By.id("tab-button")).click();
+        driver.findElement(By.id("tab-button")).click();
 
-			driver.switchTo().window(windowId);
+        // Get all window IDs
+        Set<String> handles = driver.getWindowHandles();
 
-			System.out.println("Window URL: " + driver.getCurrentUrl());
+        Thread.sleep(2000);
 
-			if (!windowId.equals(parentWindowId)) {
-				driver.close();
-			}
-		}
+        Iterator<String> it = handles.iterator();
 
-		driver.switchTo().window(parentWindowId);
+        while (it.hasNext()) {
 
-		System.out.println("Parent window title: " + driver.getTitle());
+            String windowId = it.next();
 
-		// Step 7: Close the remaining browser window
-		driver.quit();
+            // Switch to the current window
+            driver.switchTo().window(windowId);
 
-	}
+            System.out.println("Window URL: " + driver.getCurrentUrl());
 
-	/*
-	 * driver.switchTo().window(parentWindowId);
-	 * System.out.println("parent window title: "+ driver.getTitle());
-	 */
+            if (!windowId.equals(parentWindowId)) {
 
+                driver.close();
+
+            }
+        }
+
+        // Switch back to the parent window
+        driver.switchTo().window(parentWindowId);
+
+        System.out.println("Parent window URL: " + driver.getCurrentUrl());
+
+        driver.quit();
+    }
 }
+	
+
+	
+
+
+
