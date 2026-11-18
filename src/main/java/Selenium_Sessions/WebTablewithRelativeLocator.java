@@ -28,7 +28,7 @@ public class WebTablewithRelativeLocator {
 		String belowuser=driver.findElement(RelativeLocator.with(By.tagName("a")).below(ele)).getText();
 		System.out.println(belowuser);
 		
-		driver.close();
+		
 		
 		
 		
