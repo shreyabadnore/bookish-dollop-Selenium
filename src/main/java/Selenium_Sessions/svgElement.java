@@ -12,7 +12,8 @@ public class svgElement {
 
 		driver = new ChromeDriver();
 		driver.get("https://www.flipkart.com/");
-		Thread.sleep(3000);
+		driver.manage().window().maximize();
+		Thread.sleep(5000);
 
 		// SVG: xpath
 		// *[local-name()='svg']

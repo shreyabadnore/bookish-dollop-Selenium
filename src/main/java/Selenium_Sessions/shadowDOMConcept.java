@@ -23,6 +23,8 @@ public class shadowDOMConcept {
 		pizza.sendKeys("pizza");
 		
 		
+		//only css is supported x path is not supported for shadow dom element
+		
 	}
 
 
